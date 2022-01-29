@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "grpc_gateway_test/proto/hello";
+
+message StringMessage {
+  string name = 1;
+}
+
+service HelloService {
+  rpc Echo(StringMessage) returns (StringMessage) {}
+}
